@@ -1,0 +1,26 @@
+﻿using GymManagmentBLL.ViewModels.MemberViewModel;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace GymManagmentBLL.Service.Interfaces
+{
+	public interface IMemberService
+	{
+		IEnumerable<MemberViewModels> GetAllMember();
+
+		bool CreateMember(CreateMemberViewModel createMember);
+
+		MemberViewModels? GetMemberDetails(int Memberid);
+
+		HealthRecordViewModel? GetMemberHealthRecordDetails(int Memberid);
+
+		MemberToUpdateViewModel? GetMemberToUpdate(int Memberid);
+
+		bool UpdateMemeber(int Memberid, MemberToUpdateViewModel memberToUpdate);
+
+		bool RemoveMember(int Memberid);
+	}
+}
